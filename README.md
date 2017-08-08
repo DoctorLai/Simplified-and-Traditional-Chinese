@@ -15,3 +15,8 @@ If you like this plugin, could you buy me a coffee? :)
 
 # Other Online Tools
 - https://helloacm.com/tools/
+
+# Posts
+- https://steemit.com/cn/@justyy/chrome-extension-to-switch-between-simplified-chinese-and-traditional-chinese-automatically-steemit-chrome
+- https://helloacm.com/chrome-extension-to-switch-between-simplified-chinese-and-traditional-chinese-automatically/
+- https://justyy.com/archives/5016
