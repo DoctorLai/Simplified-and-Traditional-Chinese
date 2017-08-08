@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Simplified and Traditional Chinese",
+  "name": "简体繁体转换 Simplified/Traditional Chinese",
   "default_locale": "en",
-  "short_name": "ZH-CN and ZH-TW",  
-  "version": "0.11",
+  "short_name": "zh-cn-zh-tw",  
+  "version": "0.12",
   "browser_action": {
      "default_icon": "icon.png",
-     "default_title": "Simplified Traditional Chinese",
+     "default_title": "简体繁体转换 Simplified/Traditional Chinese",
      "default_popup": "main.html"
   },
   "offline_enabled": true,
