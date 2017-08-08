@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "简繁體 Simplified and Traditional Chinese",
+  "default_locale": "en",
+  "short_name": "ZH-CN and ZH-TW",  
+  "version": "0.1",
+  "browser_action": {
+     "default_icon": "icon.png",
+     "default_title": "简繁體 Simplified Traditional Chinese",
+     "default_popup": "main.html"
+  },
+  "offline_enabled": true,
+  "author": "justyy<dr.zhihua.lai@gmail.com>",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },  
+  "update_url":"http://clients2.google.com/service/update2/crx",
+  "description": "ZH-CN (GB2312) <---> ZH-TW (BIG5)",
+  "web_accessible_resources": [
+  		"js/*", 
+  		"images/*",
+  		"bs/*"
+  ],
+  "permissions": [
+     "activeTab",
+     "storage",
+     "tabs"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },  
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js":[
+          "js/convert.js",
+          "js/contentscript.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+  }]  
+}
