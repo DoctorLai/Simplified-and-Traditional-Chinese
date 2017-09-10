@@ -1,7 +1,11 @@
 (function(){
 	chrome.storage.sync.get('setting', function(data) {
-		if (data.setting != 0) {
-			translateBody(document.body, data.setting);
+		if (data != null && data.setting != 0) {
+			function work() {
+				translateBody(document.body, data.setting);	
+			}
+			work();
+			setInterval(work, 3000);
 		}
 	});  
 })();
