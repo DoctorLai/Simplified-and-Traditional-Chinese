@@ -5,7 +5,7 @@
 				translateBody(document.body, data.setting);	
 			}
 			work();
-			setInterval(work, 3000);
+			setTimeout(work, 2000);
 		}
 	});  
 })();

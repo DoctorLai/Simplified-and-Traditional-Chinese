@@ -11,6 +11,7 @@ If you like this plugin, could you buy me a coffee? :)
 - https://chrome.google.com/webstore/detail/%E7%AE%80%E7%B9%81%E9%AB%94-simplified-and-tradit/olpihmabpjpllgmahlgiakkgaccigpfo
 
 # Update History
+- 12-Sept-2017 0.14 setTimeout instead of setInterval
 - 10-Sept-2017 0.13 document_end, version, and setInterval check 3 seconds
 - 8-Aug-2017 0.1 (0.12) Init Release
 
