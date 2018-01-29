@@ -3,7 +3,7 @@
   "name": "简体繁体转换 Simplified/Traditional Chinese",
   "default_locale": "en",
   "short_name": "zh-cn-zh-tw",  
-  "version": "0.14",
+  "version": "0.15",
   "browser_action": {
      "default_icon": "icon.png",
      "default_title": "简体繁体转换 Simplified/Traditional Chinese",
@@ -35,6 +35,7 @@
   "content_scripts": [{
       "matches": ["<all_urls>"],
       "js":[
+          "js/pinyin.js",
           "js/convert.js",
           "js/contentscript.js"
       ],
