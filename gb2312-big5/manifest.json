@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "简体繁体转换 Simplified/Traditional Chinese",
   "default_locale": "en",
-  "short_name": "zh-cn-zh-tw",  
-  "version": "0.15",
+  "short_name": "ConvertToChinese",  
+  "version": "0.16",
   "browser_action": {
      "default_icon": "icon.png",
      "default_title": "简体繁体转换 Simplified/Traditional Chinese",
@@ -17,8 +17,7 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },  
-  "update_url":"http://clients2.google.com/service/update2/crx",
-  "description": "ZH-CN (GB2312) <---> ZH-TW (BIG5)",
+  "description": "Convert Automatically to Chinese (Pinyin, GB2312 and BIG5)",
   "web_accessible_resources": [
   		"js/*", 
   		"images/*",
