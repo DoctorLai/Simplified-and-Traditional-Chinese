@@ -47,10 +47,10 @@ function Traditionalized(cc) {
 }
 
 function Simplized(cc) {
-	var str = '';
-	var ss = JTPYStr();
-	var tt = FTPYStr();
-	for( var i = 0; i < cc.length; ++ i) {
+	let str = '';
+	const ss = JTPYStr();
+	const tt = FTPYStr();
+	for (let i = 0; i < cc.length; i += 1) {
 		if(testChinese(cc, i) && tt.indexOf( cc.charAt(i) ) != -1) {
 			str += ss.charAt(tt.indexOf(cc.charAt(i)));
 		} else {
@@ -62,13 +62,13 @@ function Simplized(cc) {
 
 /*
 String.prototype.replaceAll = function(search, replacement) {
-    var target = this;
+    let target = this;
     return target.split(search).join(replacement);
 };
 */
 
 String.prototype.replaceAll = function(search, replacement) {
-    var target = this;
+    let target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
 };
 
