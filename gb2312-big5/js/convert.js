@@ -88,6 +88,8 @@ function translateText(txt, targetEncoding, dialect) {
 		if (keys && values) {			
 			for (let i = 0; i < keys.length; i += 1) {
 				txt = txt.replaceAll(keys[i], values[keys[i]]);
+				txt = txt.replaceAll(Traditionalized(keys[i]), Traditionalized(values[keys[i]]));
+				txt = txt.replaceAll(Simplized(keys[i]), Simplized(values[keys[i]]));
 			}
 		}
 	}
@@ -143,9 +145,13 @@ chrome.storage.sync.get('setting', function(data) {
 		function work() {
 			translateBody(document.body, data.setting, data2.dialect);	
 		}	
-		if (data != null && data.setting != 0) {
+		if (data != null && data2 != null) {
 			work();
-			setTimeout(work, 2100);
+			setTimeout(work, 1000);
+			setTimeout(work, 2000);
+			setTimeout(work, 3000);
+			setTimeout(work, 5000);
+			setTimeout(work, 10000);
 		}
 	});
 });  
