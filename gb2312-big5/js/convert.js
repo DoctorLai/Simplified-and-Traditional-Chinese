@@ -88,8 +88,8 @@ function translateText(txt, targetEncoding, dialect) {
 		if (keys && values) {			
 			for (let i = 0; i < keys.length; i += 1) {
 				txt = txt.replaceAll(keys[i], values[keys[i]]);
-				txt = txt.replaceAll(Traditionalized(keys[i]), Traditionalized(values[keys[i]]));
-				txt = txt.replaceAll(Simplized(keys[i]), Simplized(values[keys[i]]));
+				//txt = txt.replaceAll(Traditionalized(keys[i]), Traditionalized(values[keys[i]]));
+				//txt = txt.replaceAll(Simplized(keys[i]), Simplized(values[keys[i]]));
 			}
 		}
 	}
@@ -147,11 +147,9 @@ chrome.storage.sync.get('setting', function(data) {
 		}	
 		if (data != null && data2 != null) {
 			work();
-			setTimeout(work, 1000);
 			setTimeout(work, 2000);
-			setTimeout(work, 3000);
+			setTimeout(work, 3500);
 			setTimeout(work, 5000);
-			setTimeout(work, 10000);
 		}
 	});
 });  
