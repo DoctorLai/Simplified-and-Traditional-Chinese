@@ -24,7 +24,6 @@
   		"bs/*"
   ],
   "permissions": [
-     "activeTab",
      "storage"
   ],
   "background": {
