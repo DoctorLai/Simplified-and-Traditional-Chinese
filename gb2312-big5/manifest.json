@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "简体繁体转换 Simplified/Traditional Chinese",
+  "name": "简体繁体拼音广东话转换 Simplified/Traditional Chinese",
   "default_locale": "en",
   "short_name": "ConvertToChinese",  
-  "version": "0.16",
+  "version": "0.17",
   "browser_action": {
      "default_icon": "icon.png",
-     "default_title": "简体繁体转换 Simplified/Traditional Chinese",
+     "default_title": "简体繁体拼音广东话转换 Simplified/Traditional Chinese",
      "default_popup": "main.html"
   },
   "offline_enabled": true,
@@ -17,16 +17,14 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },  
-  "description": "Convert Automatically to Chinese (Pinyin, GB2312 and BIG5)",
+  "description": "Convert Automatically to Chinese (Pinyin, Cantonese GB2312 and BIG5)",
   "web_accessible_resources": [
   		"js/*", 
   		"images/*",
   		"bs/*"
   ],
   "permissions": [
-     "activeTab",
-     "storage",
-     "tabs"
+     "storage"
   ],
   "background": {
     "scripts": ["js/background.js"]
@@ -35,8 +33,8 @@
       "matches": ["<all_urls>"],
       "js":[
           "js/pinyin.js",
-          "js/convert.js",
-          "js/contentscript.js"
+          "js/dialect.js",
+          "js/convert.js"
       ],
       "run_at": "document_end",
       "all_frames": false
