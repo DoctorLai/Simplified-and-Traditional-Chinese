@@ -3,9 +3,12 @@
 - Refresh the page if you do not see changes.
 - Bugs reported to:  https://steemit.com/@justyy/
 
-If you like this plugin, could you buy me a coffee? :)
-- https://www.paypal.me/doctorlai/3
-- bitcoin:1J88t5UAgKBHhMgzkyH9bpY5mPdCYAe5XQ
+Enjoy what I am doing? Support me via:
+- [Buy me a coffee please ☕](https://helloacm.com/out/buymecoffee)
+- [Become a Github Sponsor 💰](https://github.com/sponsors/DoctorLai)
+- [Become a Patreon 💰](https://www.patreon.com/doctorlai)
+- **[Crypto Payment Accepted  ₿](https://justyy.com/out/cryptopayment)**
+- [Paypal 🅿️](https://justyy.com/out/paypal)
 
 # Chrome WebStore:
 - https://chrome.google.com/webstore/detail/%E7%AE%80%E7%B9%81%E9%AB%94-simplified-and-tradit/olpihmabpjpllgmahlgiakkgaccigpfo
