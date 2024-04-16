@@ -145,16 +145,43 @@ function translateBody(fobj, targetEncoding, dialect) {
 	}
 }
 
+function checkList(url, list_of_regex) {
+    // Split the list_of_regex into an array
+    const regexArray = list_of_regex.split('\n').filter(pattern => pattern.trim() !== '');
+	console.log(regexArray, list_of_regex);
+	if (regexArray.length == 0) {
+		return false;
+	}
+
+    // Loop through the array and test the URL against each regex
+    for (const regex of regexArray) {
+		const pattern = new RegExp(regex, "i");
+        if ((pattern.test(url)) || (url.includes(regex))) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
 chrome.storage.sync.get('setting', function(data) {
 	chrome.storage.sync.get('dialect', function(data2) {
-		function work() {
-			translateBody(document.body, data.setting, data2.dialect);	
-		}	
-		if (data != null && data2 != null) {
-			work();
-			setTimeout(work, 2000);
-			setTimeout(work, 3500);
-			setTimeout(work, 5000);
-		}
+		chrome.storage.sync.get('blist', function(data3) {
+			async function work() {
+				const url = window.location.toString();
+				if (!checkList(url, data3.blist)) {
+					translateBody(document.body, data.setting, data2.dialect);
+				} else {
+					console.log(`${url} in blacklist`);
+				}
+			}
+			if (data != null && data2 != null && data3 != null) {
+				work();
+				setTimeout(work, 2000);
+				setTimeout(work, 3500);
+				setTimeout(work, 5000);
+			}
+		});		
 	});
 });  
