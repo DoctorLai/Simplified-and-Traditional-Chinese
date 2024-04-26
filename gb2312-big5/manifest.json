@@ -3,7 +3,7 @@
   "name": "简体繁体拼音广东话转换 Simplified/Traditional Chinese",
   "default_locale": "en",
   "short_name": "ConvertToChinese",  
-  "version": "0.21",
+  "version": "0.22",
   "action": {
      "default_icon": "icon.png",
      "default_title": "简体繁体拼音广东话转换 Simplified/Traditional Chinese",

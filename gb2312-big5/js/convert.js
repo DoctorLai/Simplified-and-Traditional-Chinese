@@ -146,6 +146,9 @@ function translateBody(fobj, targetEncoding, dialect) {
 }
 
 function checkList(url, list_of_regex) {
+	if ((!list_of_regex) || (typeof list_of_regex !== "string")) {
+		return false;
+	}
     // Split the list_of_regex into an array
     const regexArray = list_of_regex.split('\n').filter(pattern => pattern.trim() !== '');
 	console.log(regexArray, list_of_regex);
@@ -160,28 +163,30 @@ function checkList(url, list_of_regex) {
             return true;
         }
     }
-
     return false;
 }
 
+(async function() {
+	const [setting, dialect, blist] = await Promise.all([
+		chrome.storage.sync.get('setting'),
+		chrome.storage.sync.get('dialect'),
+		chrome.storage.sync.get('blist')
+	]);
 
-chrome.storage.sync.get('setting', function(data) {
-	chrome.storage.sync.get('dialect', function(data2) {
-		chrome.storage.sync.get('blist', function(data3) {
-			async function work() {
-				const url = window.location.toString();
-				if (!checkList(url, data3.blist)) {
-					translateBody(document.body, data.setting, data2.dialect);
-				} else {
-					console.log(`${url} in blacklist`);
-				}
-			}
-			if (data != null && data2 != null && data3 != null) {
-				work();
-				setTimeout(work, 2000);
-				setTimeout(work, 3500);
-				setTimeout(work, 5000);
-			}
-		});		
-	});
-});  
+	async function work(setting, dialect, blist) {
+		const url = window.location.toString();
+		if (!checkList(url, blist)) {
+			translateBody(document.body, setting, dialect);
+		} else {
+			console.log(`${url} in blacklist`);
+		}
+	}
+	//console.log(setting.setting, dialect.dialect, blist.blist);
+
+	if (setting && dialect && blist) {
+		work(setting.setting, dialect.dialect, blist.blist);
+		setTimeout(work, 2000);
+		setTimeout(work, 3500);
+		setTimeout(work, 5000);
+	}
+})();  
