@@ -24,12 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.storage.sync.set({ dialect: document.getElementById("dialect").selectedIndex });
     });        
     chrome.storage.sync.get('setting', function(data) {
+        if (!data || (!data.setting) || (typeof data.setting === "undefined")) {
+            data.setting = 0;
+        }
         document.getElementById("setting").selectedIndex = data.setting;  
     });
     chrome.storage.sync.get('dialect', function(data) {
+        if (!data || (!data.dialect) || (typeof data.dialect === "undefined")) {
+            data.dialect = 0;
+        }
         document.getElementById("dialect").selectedIndex = data.dialect;  
     });
     chrome.storage.sync.get('blist', function(data) {
+        if (!data || (!data.blist) || (typeof data.blist === "undefined")) {
+            data.blist = "";
+        }        
         document.getElementById("blist").value = data.blist;
     });  
 }, false);
