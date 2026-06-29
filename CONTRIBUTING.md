@@ -85,4 +85,4 @@ version. Security-sensitive reports can be sent privately via the contact form o
 ## License
 
 By contributing, you agree that your contributions will be licensed under the
-[GNU GPL v2](LICENSE).
+[MIT License](LICENSE).

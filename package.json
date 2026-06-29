@@ -28,7 +28,7 @@
     "translation"
   ],
   "author": "justyy (DoctorLai) <dr.zhihua.lai@gmail.com> (https://justyy.com)",
-  "license": "GPL-2.0-only",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DoctorLai/Simplified-and-Traditional-Chinese.git"

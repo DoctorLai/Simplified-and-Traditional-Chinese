@@ -9,7 +9,7 @@
 [![CI](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/actions/workflows/ci.yml/badge.svg)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/actions/workflows/ci.yml)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Manifest V3](https://img.shields.io/badge/manifest-v3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
-[![License: GPL v2](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
+[![License: MIT](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?logo=prettier&logoColor=white)](https://prettier.io/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -150,4 +150,4 @@ More free online tools: <https://helloacm.com/tools/>
 
 ## License
 
-Released under the [GNU General Public License v2.0](LICENSE).
+Released under the [MIT License](LICENSE).
