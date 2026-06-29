@@ -1,0 +1,20 @@
+node_modules
+dist
+coverage
+package-lock.json
+
+# Vendored / third-party libraries
+gb2312-big5/js/jquery.js
+gb2312-big5/js/jquery-ui.js
+gb2312-big5/bs/
+gb2312-big5/css/jquery-ui.css
+
+# Large generated data tables
+gb2312-big5/js/pinyin.js
+gb2312-big5/js/dialect.js
+
+# Hand-tuned popup markup (whitespace sensitive)
+gb2312-big5/main.html
+
+# License text
+LICENSE

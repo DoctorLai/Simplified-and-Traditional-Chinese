@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "간체/번체 중국어 변환기",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "웹 페이지를 간체 중국어, 번체 중국어, 병음, 광둥어로 변환합니다.",
+    "description": "Extension description"
+  }
+}

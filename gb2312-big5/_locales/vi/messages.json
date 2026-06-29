@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Bộ chuyển đổi tiếng Trung giản thể/phồn thể",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Chuyển đổi trang web giữa tiếng Trung giản thể, phồn thể, bính âm và tiếng Quảng Đông.",
+    "description": "Extension description"
+  }
+}

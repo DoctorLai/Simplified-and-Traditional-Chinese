@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "中文简体中文繁體转换 Simplified and Traditional Chinese Converter (包括 拼音和广东话)",
-    "description": "中文简体中文繁體转换 Simplified and Traditional Chinese Converter (包括 拼音和广东话) https://helloacm.com/tools/"
+    "message": "简体/繁体中文转换器",
+    "description": "Extension name"
   },
   "appDesc": {
-    "message": "中文简体中文繁體转换Simplified and Traditional Chinese Converter (包括 拼音和广东话)",
-    "description": "中文简体中文繁體转换 Simplified and Traditional Chinese Converter (包括 拼音和广东话) https://helloacm.com/tools/"
+    "message": "在网页中转换简体中文、繁体中文、拼音和广东话。",
+    "description": "Extension description"
   }
 }

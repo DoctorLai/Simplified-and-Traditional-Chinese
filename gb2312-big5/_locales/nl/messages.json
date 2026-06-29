@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Converter voor vereenvoudigd/traditioneel Chinees",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Converteert webpagina's tussen vereenvoudigd Chinees, traditioneel Chinees, pinyin en Kantonees.",
+    "description": "Extension description"
+  }
+}

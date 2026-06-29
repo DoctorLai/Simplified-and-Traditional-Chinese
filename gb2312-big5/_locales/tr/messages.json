@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Basitleştirilmiş/Geleneksel Çince Dönüştürücü",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Web sayfalarını Basitleştirilmiş Çince, Geleneksel Çince, Pinyin ve Kantonca arasında dönüştürür.",
+    "description": "Extension description"
+  }
+}
