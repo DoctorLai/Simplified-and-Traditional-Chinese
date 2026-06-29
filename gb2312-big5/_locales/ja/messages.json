@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "簡体字/繁体字中国語変換ツール",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "ウェブページを簡体字中国語、繁体字中国語、ピンイン、広東語に変換します。",
+    "description": "Extension description"
+  }
+}

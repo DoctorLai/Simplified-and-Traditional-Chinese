@@ -20474,3 +20474,7 @@ const tone_o = "ōóǒò";
 const tone_e = "ēéěè";
 const tone_i = "īíǐì";
 const tone_u = "ǖǘǚǜü";
+
+if (typeof module !== 'undefined' && module.exports) {
+	module.exports = { pinyin_data, tone_a, tone_o, tone_e, tone_i, tone_u };
+}

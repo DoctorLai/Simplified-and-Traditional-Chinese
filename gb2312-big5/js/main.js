@@ -1,44 +1,61 @@
-
-function getChromeVersion() {     
-	var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-	return raw ? parseInt(raw[2], 10) : false;
+function getChromeVersion() {
+  var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+  return raw ? parseInt(raw[2], 10) : false;
 }
 
 var manifest = chrome.runtime.getManifest();
-var app_name = manifest.name + " v" + manifest.version;
+var app_name = manifest.name + ' v' + manifest.version;
 
-document.addEventListener('DOMContentLoaded', function() {
-    $(function() {   
-        $( "#tabs" ).tabs();
+document.addEventListener(
+  'DOMContentLoaded',
+  function () {
+    $(function () {
+      $('#tabs').tabs();
     });
     const about = $('textarea#about');
-    about.html('App: ' + app_name + '\nChrome Version: ' + getChromeVersion() + "\n");
-    const blist = $('textarea#blist');
-    $('textarea#blist').change(function() {
-        chrome.storage.sync.set({ blist: document.getElementById("blist").value });
+    about.html('App: ' + app_name + '\nChrome Version: ' + getChromeVersion() + '\n');
+    $('textarea#wlist').change(function () {
+      chrome.storage.sync.set({ wlist: document.getElementById('wlist').value });
     });
-    $('select#setting').change(function() {
-        chrome.storage.sync.set({ setting: document.getElementById("setting").selectedIndex });
-    });  
-    $('select#dialect').change(function() {
-        chrome.storage.sync.set({ dialect: document.getElementById("dialect").selectedIndex });
-    });        
-    chrome.storage.sync.get('setting', function(data) {
-        if (!data || (!data.setting) || (typeof data.setting === "undefined")) {
-            data.setting = 0;
-        }
-        document.getElementById("setting").selectedIndex = data.setting;  
+    $('textarea#blist').change(function () {
+      chrome.storage.sync.set({ blist: document.getElementById('blist').value });
     });
-    chrome.storage.sync.get('dialect', function(data) {
-        if (!data || (!data.dialect) || (typeof data.dialect === "undefined")) {
-            data.dialect = 0;
-        }
-        document.getElementById("dialect").selectedIndex = data.dialect;  
+    $('select#setting').change(function () {
+      chrome.storage.sync.set({ setting: document.getElementById('setting').selectedIndex });
     });
-    chrome.storage.sync.get('blist', function(data) {
-        if (!data || (!data.blist) || (typeof data.blist === "undefined")) {
-            data.blist = "";
-        }        
-        document.getElementById("blist").value = data.blist;
-    });  
-}, false);
+    $('select#dialect').change(function () {
+      chrome.storage.sync.set({ dialect: document.getElementById('dialect').selectedIndex });
+    });
+    $('#apply').on('click', function () {
+      if (chrome.tabs && chrome.tabs.reload) {
+        chrome.tabs.reload();
+        window.close();
+      }
+    });
+    chrome.storage.sync.get('setting', function (data) {
+      if (!data || !data.setting || typeof data.setting === 'undefined') {
+        data.setting = 0;
+      }
+      document.getElementById('setting').selectedIndex = data.setting;
+    });
+    chrome.storage.sync.get('dialect', function (data) {
+      if (!data || !data.dialect || typeof data.dialect === 'undefined') {
+        data.dialect = 0;
+      }
+      document.getElementById('dialect').selectedIndex = data.dialect;
+    });
+    chrome.storage.sync.get('wlist', function (data) {
+      if (!data || !data.wlist || typeof data.wlist === 'undefined') {
+        data.wlist = '';
+      }
+      document.getElementById('wlist').value = data.wlist;
+    });
+    chrome.storage.sync.get('blist', function (data) {
+      if (!data || !data.blist || typeof data.blist === 'undefined') {
+        data.blist = '';
+      }
+      document.getElementById('blist').value = data.blist;
+    });
+  },
+  false
+);

@@ -1,0 +1,70 @@
+{
+  "name": "simplified-and-traditional-chinese",
+  "version": "0.22.0",
+  "description": "Chrome extension that automatically converts web pages between Simplified Chinese, Traditional Chinese, Pinyin and Cantonese.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "check": "npm run lint && npm run format:check && npm run coverage",
+    "build": "node scripts/build.js",
+    "zip": "node scripts/build.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "manifest-v3",
+    "chinese",
+    "simplified-chinese",
+    "traditional-chinese",
+    "pinyin",
+    "cantonese",
+    "gb2312",
+    "big5",
+    "translation"
+  ],
+  "author": "justyy (DoctorLai) <dr.zhihua.lai@gmail.com> (https://justyy.com)",
+  "license": "GPL-2.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoctorLai/Simplified-and-Traditional-Chinese.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/issues"
+  },
+  "homepage": "https://github.com/DoctorLai/Simplified-and-Traditional-Chinese#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "archiver": "^7.0.1",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.11.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "gb2312-big5/js/convert.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 70,
+        "branches": 60,
+        "functions": 70,
+        "lines": 70
+      }
+    }
+  }
+}

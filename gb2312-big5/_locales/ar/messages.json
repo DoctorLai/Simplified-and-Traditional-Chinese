@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "محول الصينية المبسطة والتقليدية",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "حوّل صفحات الويب بين الصينية المبسطة والتقليدية والبينيين والكانتونية.",
+    "description": "Extension description"
+  }
+}

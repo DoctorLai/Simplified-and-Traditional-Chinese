@@ -30,14 +30,23 @@
             <option value="pinyin">拼音 Pinyin</option>
           </select>
           <BR/>
+          <button id=apply type=button class='btn btn-primary btn-block'>刷新当前页面 Apply &amp; Reload Page</button>
+          <BR/>
           <div>
-            Black list - Do not enable on the following URLs (RegExp). <BR/>
-            黑名单 - 在下面的URL中禁用本插件。<BR/>
+            White list - Only enable on the following domains (RegExp, optional). <BR/>
+            白名单 - 只在下面的域名启用本插件（可选）。<BR/>
           </div>
-          <textarea rows=8 id=blist name=blist class='form-control' placeholder="https://www.google.com
+          <textarea rows=4 id=wlist name=wlist class='form-control' placeholder="example.com
+.*\.edu
+          "></textarea>
+          <BR/>
+          <div>
+            Black list - Do not enable on the following domains (RegExp). <BR/>
+            黑名单 - 在下面的域名中禁用本插件。<BR/>
+          </div>
+          <textarea rows=4 id=blist name=blist class='form-control' placeholder="https://www.google.com
 justyy.com
           "></textarea>
-          </textarea>
           <BR/>
           方言转换，这个功能还在测试阶段。 <BR/>
           Dialet Conversion, Alpha Testing. <BR/>

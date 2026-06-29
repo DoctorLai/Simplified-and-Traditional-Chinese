@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "सरलीकृत/पारंपरिक चीनी कन्वर्टर",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "वेब पेजों को सरलीकृत चीनी, पारंपरिक चीनी, पिनयिन और कैंटोनीज़ में बदलें।",
+    "description": "Extension description"
+  }
+}

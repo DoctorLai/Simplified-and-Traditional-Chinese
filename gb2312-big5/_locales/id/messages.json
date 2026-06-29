@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Konverter Tionghoa Sederhana/Tradisional",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Konversi halaman web antara Tionghoa Sederhana, Tionghoa Tradisional, Pinyin, dan Kanton.",
+    "description": "Extension description"
+  }
+}

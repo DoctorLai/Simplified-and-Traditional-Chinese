@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Convertisseur chinois simplifié/traditionnel",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Convertit les pages web entre chinois simplifié, chinois traditionnel, pinyin et cantonais.",
+    "description": "Extension description"
+  }
+}

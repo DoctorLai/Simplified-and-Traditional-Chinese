@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main, '1.0']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Lint, test & build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Test with coverage
+        run: npm run coverage
+
+      - name: Build extension package
+        run: npm run build
+
+      - name: Upload extension package
+        if: matrix.node-version == '22.x'
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-zip
+          path: dist/*.zip
+          if-no-files-found: error

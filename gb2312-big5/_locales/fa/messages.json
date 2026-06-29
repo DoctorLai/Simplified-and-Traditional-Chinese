@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "مبدل چینی ساده و سنتی",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "صفحات وب را میان چینی ساده، چینی سنتی، پین‌یین و کانتونی تبدیل می‌کند.",
+    "description": "Extension description"
+  }
+}

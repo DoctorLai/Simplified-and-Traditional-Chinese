@@ -1,0 +1,16 @@
+# Binary assets — never diff or convert line endings.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+
+# GitHub Linguist hints: keep large generated/vendored files out of language
+# stats and collapse them in diffs. (These do not affect local line endings.)
+gb2312-big5/js/pinyin.js linguist-generated
+gb2312-big5/js/dialect.js linguist-generated
+gb2312-big5/js/jquery.js linguist-vendored
+gb2312-big5/js/jquery-ui.js linguist-vendored
+gb2312-big5/bs/** linguist-vendored
+gb2312-big5/css/jquery-ui.css linguist-vendored

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "ตัวแปลงจีนตัวย่อ/ตัวเต็ม",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "แปลงหน้าเว็บระหว่างจีนตัวย่อ จีนตัวเต็ม พินอิน และกวางตุ้ง",
+    "description": "Extension description"
+  }
+}

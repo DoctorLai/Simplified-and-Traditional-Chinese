@@ -474,3 +474,7 @@ C2M_keys.sort(function(a, b){
     // DESC -> b.length - a.length
     return b.length - a.length;
 });
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { C2M, M2C, C2M_keys, M2C_keys };
+}
