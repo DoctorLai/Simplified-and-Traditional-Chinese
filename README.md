@@ -10,8 +10,10 @@
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Manifest V3](https://img.shields.io/badge/manifest-v3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
 [![License: MIT](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/doctorlai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/doctorlai/Simplified-and-Traditional-Chinese/commits)
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?logo=prettier&logoColor=white)](https://prettier.io/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Issues](https://img.shields.io/github/issues/doctorlai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/doctorlai/Simplified-and-Traditional-Chinese/issues)
 [![Privacy Policy](https://img.shields.io/badge/privacy-policy-0f766e)](PRIVACY.md)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/olpihmabpjpllgmahlgiakkgaccigpfo?label=chrome%20web%20store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
