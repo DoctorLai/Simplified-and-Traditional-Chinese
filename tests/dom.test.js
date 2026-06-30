@@ -26,6 +26,12 @@ describe('translateBody', () => {
     expect(document.body.textContent).toBe('简体中文');
   });
 
+  it('keeps 著名 when simplifying page text', () => {
+    document.body.innerHTML = '<div>最著名的人</div>';
+    translateBody(document.body, 1, 0);
+    expect(document.body.textContent).toBe('最著名的人');
+  });
+
   it('translates the alt attribute of elements', () => {
     document.body.innerHTML = '<img alt="简体">';
     translateBody(document.body, 2, 0);
