@@ -23,7 +23,6 @@
 <img width="1164" height="882" alt="image" src="https://github.com/user-attachments/assets/b4f75021-1b72-44e6-a8a3-4a438e4b9f8c" />
 <img width="1138" height="641" alt="image" src="https://github.com/user-attachments/assets/2f7fa5c8-1457-4ad1-8ef6-8ebee20ddf95" />
 
-
 ## Features
 
 - 🔁 **Simplified ⇄ Traditional** — convert any page between Simplified Chinese
