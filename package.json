@@ -1,6 +1,6 @@
 {
   "name": "simplified-and-traditional-chinese",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chrome extension that automatically converts web pages between Simplified Chinese, Traditional Chinese, Pinyin and Cantonese.",
   "private": true,
   "type": "commonjs",

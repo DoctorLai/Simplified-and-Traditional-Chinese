@@ -12,6 +12,7 @@
 [![License: MIT](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?logo=prettier&logoColor=white)](https://prettier.io/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Privacy Policy](https://img.shields.io/badge/privacy-policy-0f766e)](PRIVACY.md)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/olpihmabpjpllgmahlgiakkgaccigpfo?label=chrome%20web%20store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
 [![Users](https://img.shields.io/chrome-web-store/users/olpihmabpjpllgmahlgiakkgaccigpfo?label=users)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
@@ -129,6 +130,11 @@ tests/                  # Jest unit tests
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and make
 sure `npm run check` passes before opening a pull request.
+
+## Privacy
+
+This extension runs locally in your browser and does not collect, transmit, sell,
+or share personal data. See the [Privacy Policy](PRIVACY.md) for details.
 
 ## Support
 

@@ -31,6 +31,17 @@ describe('Traditionalized / Simplized', () => {
     expect(Simplized('簡體中文')).toBe('简体中文');
   });
 
+  it('keeps 著 in simplified phrases that use 著', () => {
+    expect(Simplized('最著名的著作')).toBe('最著名的著作');
+    expect(Simplized('著稱的著書與著作權')).toBe('著称的著书与著作权');
+    expect(Simplized('顯著成果與世界名著')).toBe('显著成果与世界名著');
+    expect(Simplized('專著、編著、譯著和合著')).toBe('专著、编著、译著和合著');
+  });
+
+  it('still converts standalone 著 to 着', () => {
+    expect(Simplized('看著')).toBe('看着');
+  });
+
   it('leaves non-Chinese text untouched', () => {
     expect(Traditionalized('Hello 123!')).toBe('Hello 123!');
     expect(Simplized('Hello 123!')).toBe('Hello 123!');
@@ -64,6 +75,10 @@ describe('translateText', () => {
 
   it('converts to simplified (encoding 1)', () => {
     expect(translateText('簡體', 1, 0)).toBe('简体');
+  });
+
+  it('keeps 著名 when converting to simplified', () => {
+    expect(translateText('最著名的人', 1, 0)).toBe('最著名的人');
   });
 
   it('converts to traditional (encoding 2)', () => {

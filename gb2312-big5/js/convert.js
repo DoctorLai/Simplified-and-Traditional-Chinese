@@ -51,11 +51,42 @@ function Traditionalized(cc) {
   return str;
 }
 
+const TRADITIONAL_TO_SIMPLIFIED_PHRASES = [
+  ['著作權', '著作权'],
+  ['顯著', '显著'],
+  ['著名', '著名'],
+  ['著作', '著作'],
+  ['著述', '著述'],
+  ['著者', '著者'],
+  ['著稱', '著称'],
+  ['著書', '著书'],
+  ['著錄', '著录'],
+  ['卓著', '卓著'],
+  ['昭著', '昭著'],
+  ['土著', '土著'],
+  ['原著', '原著'],
+  ['名著', '名著'],
+  ['巨著', '巨著'],
+  ['專著', '专著'],
+  ['編著', '编著'],
+  ['譯著', '译著'],
+  ['合著', '合著'],
+  ['遺著', '遗著']
+];
+
 function Simplized(cc) {
   let str = '';
   const ss = JTPYStr();
   const tt = FTPYStr();
   for (let i = 0; i < cc.length; i += 1) {
+    const phrase = TRADITIONAL_TO_SIMPLIFIED_PHRASES.find(([traditional]) =>
+      cc.startsWith(traditional, i)
+    );
+    if (phrase) {
+      str += phrase[1];
+      i += phrase[0].length - 1;
+      continue;
+    }
     if (testChinese(cc, i) && tt.indexOf(cc.charAt(i)) != -1) {
       str += ss.charAt(tt.indexOf(cc.charAt(i)));
     } else {
