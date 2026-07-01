@@ -23,7 +23,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/DoctorLai/Simplified-and-Traditional-Chinese)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/commits)
 
 <img width="1164" height="882" alt="image" src="https://github.com/user-attachments/assets/b4f75021-1b72-44e6-a8a3-4a438e4b9f8c" />
-<img width="1138" height="641" alt="image" src="https://github.com/user-attachments/assets/2f7fa5c8-1457-4ad1-8ef6-8ebee20ddf95" />
+<img width="1133" height="394" alt="image" src="https://github.com/user-attachments/assets/1c65b389-88a8-4694-b44b-97ba9203dc33" />
 
 ## Features
 
