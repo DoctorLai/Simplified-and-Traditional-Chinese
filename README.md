@@ -28,7 +28,7 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/commits)
 [![Repo size](https://img.shields.io/github/repo-size/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese)
 [![Top language](https://img.shields.io/github/languages/top/DoctorLai/Simplified-and-Traditional-Chinese?logo=javascript&logoColor=black)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese)
-[![JavaScript](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/DoctorLai/Simplified-and-Traditional-Chinese/master/.github/badges/javascript.json)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/search?l=javascript)
+[![JavaScript](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/DoctorLai/Simplified-and-Traditional-Chinese/badges/javascript.json)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/search?l=javascript)
 
 <!-- Chrome Web Store -->
 

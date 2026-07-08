@@ -2,7 +2,8 @@ name: Language badge
 
 # Recomputes the JavaScript share of the repository from GitHub's own Linguist
 # stats (which already honour .gitattributes vendoring/generation rules) and
-# stores it as a shields.io "endpoint" badge under .github/badges/.
+# publishes it as a shields.io "endpoint" badge on the dedicated, unprotected
+# `badges` branch — so it never pushes to the protected default branch.
 
 on:
   push:
@@ -24,21 +25,18 @@ jobs:
     name: Update JavaScript badge
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Generate badge data
+      - name: Compute and publish badge
         uses: actions/github-script@v9
         with:
           script: |
-            const fs = require('fs');
-            const { data } = await github.rest.repos.listLanguages({
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
-            const total = Object.values(data).reduce((sum, n) => sum + n, 0);
-            const js = data.JavaScript || 0;
-            const pct = total ? (js / total) * 100 : 0;
+            const { owner, repo } = context.repo;
+            const branch = 'badges';
+            const path = 'javascript.json';
+
+            // 1. Compute the JavaScript share from GitHub's Linguist stats.
+            const { data: langs } = await github.rest.repos.listLanguages({ owner, repo });
+            const total = Object.values(langs).reduce((sum, n) => sum + n, 0);
+            const pct = total ? ((langs.JavaScript || 0) / total) * 100 : 0;
             const badge = {
               schemaVersion: 1,
               label: 'JavaScript',
@@ -47,21 +45,75 @@ jobs:
               namedLogo: 'javascript',
               logoColor: 'black'
             };
-            fs.mkdirSync('.github/badges', { recursive: true });
-            fs.writeFileSync(
-              '.github/badges/javascript.json',
-              JSON.stringify(badge, null, 2) + '\n'
-            );
-            core.info(`JavaScript: ${badge.message}`);
+            const content = JSON.stringify(badge, null, 2) + '\n';
 
-      - name: Commit updated badge
-        run: |
-          if [[ -n "$(git status --porcelain .github/badges/javascript.json)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add .github/badges/javascript.json
-            git commit -m "chore: update JavaScript language badge [skip ci]"
-            git push
-          else
-            echo "JavaScript badge already up to date."
-          fi
+            // 2. Find the current head of the (unprotected) badges branch.
+            let parentSha;
+            try {
+              const { data: ref } = await github.rest.git.getRef({
+                owner,
+                repo,
+                ref: `heads/${branch}`
+              });
+              parentSha = ref.object.sha;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+
+            // 3. Skip when the published badge is already identical.
+            if (parentSha) {
+              try {
+                const { data: existing } = await github.rest.repos.getContent({
+                  owner,
+                  repo,
+                  path,
+                  ref: branch
+                });
+                const current = Buffer.from(existing.content, 'base64').toString('utf8');
+                if (current === content) {
+                  core.info(`JavaScript badge already up to date (${badge.message}).`);
+                  return;
+                }
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+            }
+
+            // 4. Build a tree that contains only the badge file.
+            const { data: blob } = await github.rest.git.createBlob({
+              owner,
+              repo,
+              content,
+              encoding: 'utf-8'
+            });
+            const { data: tree } = await github.rest.git.createTree({
+              owner,
+              repo,
+              tree: [{ path, mode: '100644', type: 'blob', sha: blob.sha }]
+            });
+
+            // 5. Commit to the badges branch (orphan commit when it is new),
+            //    never touching the protected default branch.
+            const { data: commit } = await github.rest.git.createCommit({
+              owner,
+              repo,
+              message: 'chore: update JavaScript language badge [skip ci]',
+              tree: tree.sha,
+              parents: parentSha ? [parentSha] : []
+            });
+            if (parentSha) {
+              await github.rest.git.updateRef({
+                owner,
+                repo,
+                ref: `heads/${branch}`,
+                sha: commit.sha
+              });
+            } else {
+              await github.rest.git.createRef({
+                owner,
+                repo,
+                ref: `refs/heads/${branch}`,
+                sha: commit.sha
+              });
+            }
+            core.info(`JavaScript badge published: ${badge.message}`);
