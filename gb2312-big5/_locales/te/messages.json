@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "సరళీకృత/సాంప్రదాయ చైనీస్ కన్వర్టర్",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "సరళీకృత చైనీస్, సాంప్రదాయ చైనీస్, పిన్‌యిన్ మరియు కాంటనీస్ మధ్య వెబ్ పేజీలను మార్చండి.",
+    "description": "Extension description"
+  }
+}

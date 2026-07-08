@@ -1,6 +1,6 @@
 {
   "name": "simplified-and-traditional-chinese",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Chrome extension that automatically converts web pages between Simplified Chinese, Traditional Chinese, Pinyin and Cantonese.",
   "private": true,
   "type": "commonjs",
@@ -9,9 +9,12 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "fix": "npm run lint:fix && npm run format",
     "test": "jest",
+    "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "check": "npm run lint && npm run format:check && npm run coverage",
+    "check": "npm run lint && npm run format:check && npm run coverage && npm run build",
+    "clean": "node scripts/clean.js",
     "build": "node scripts/build.js",
     "zip": "node scripts/build.js"
   },
@@ -60,10 +63,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "statements": 70,
-        "branches": 60,
-        "functions": 70,
-        "lines": 70
+        "statements": 95,
+        "branches": 90,
+        "functions": 95,
+        "lines": 95
       }
     }
   }

@@ -6,7 +6,9 @@ const {
   translateText,
   checkList,
   getDomain,
-  shouldTranslatePage
+  shouldTranslatePage,
+  FTPYStr,
+  JTPYStr
 } = require('../gb2312-big5/js/convert.js');
 
 describe('testChinese', () => {
@@ -61,6 +63,23 @@ describe('Pinyin', () => {
   it('keeps non-Chinese characters in place', () => {
     expect(Pinyin('A')).toBe('A');
   });
+
+  it('keeps CJK characters that are absent from the pinyin table', () => {
+    // U+3400 (㐀) is a valid CJK ideograph with no entry in the lookup table.
+    expect(Pinyin('㐀')).toBe('㐀');
+  });
+
+  it('joins pinyin for consecutive characters with a space', () => {
+    expect(Pinyin('中文')).toBe('Zhōng Wén');
+  });
+
+  it('keeps Latin text and punctuation adjacent to converted characters', () => {
+    expect(Pinyin('Hi中!')).toBe('HiZhōng !');
+  });
+
+  it('returns an empty string for an empty input', () => {
+    expect(Pinyin('')).toBe('');
+  });
 });
 
 describe('translateText', () => {
@@ -91,6 +110,34 @@ describe('translateText', () => {
 
   it('applies the Cantonese -> Mandarin dialect mapping', () => {
     expect(translateText('係', 0, 1)).toBe('是');
+  });
+
+  it('applies the Mandarin -> Cantonese dialect mapping', () => {
+    expect(translateText('他', 0, 2)).toBe('佢');
+  });
+
+  it('ignores an unknown dialect value', () => {
+    expect(translateText('係', 0, 9)).toBe('係');
+  });
+
+  it('combines dialect conversion with target encoding', () => {
+    // Cantonese -> Mandarin, then Mandarin simplified stays simplified.
+    expect(translateText('係', 1, 1)).toBe('是');
+  });
+});
+
+describe('conversion table integrity', () => {
+  it('exposes simplified and traditional tables of equal length', () => {
+    expect(JTPYStr().length).toBe(FTPYStr().length);
+  });
+
+  it('maps each simplified character to a distinct traditional counterpart', () => {
+    const simplified = JTPYStr();
+    const traditional = FTPYStr();
+    // Round-trip the first characters to guard against table drift.
+    for (let i = 0; i < 50; i += 1) {
+      expect(Traditionalized(simplified.charAt(i))).toBe(traditional.charAt(i));
+    }
   });
 });
 
