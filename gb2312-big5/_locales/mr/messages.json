@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "सरलीकृत/पारंपरिक चिनी रूपांतरक",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "सरलीकृत चिनी, पारंपरिक चिनी, पिनयिन आणि कँटोनीज दरम्यान वेब पृष्ठे रूपांतरित करा.",
+    "description": "Extension description"
+  }
+}

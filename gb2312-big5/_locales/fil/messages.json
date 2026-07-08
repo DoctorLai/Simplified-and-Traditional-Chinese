@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Converter ng Pinasimple/Tradisyonal na Intsik",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "I-convert ang mga web page sa pagitan ng Pinasimpleng Intsik, Tradisyonal na Intsik, Pinyin at Cantonese.",
+    "description": "Extension description"
+  }
+}

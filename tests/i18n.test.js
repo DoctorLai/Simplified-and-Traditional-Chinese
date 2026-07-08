@@ -5,7 +5,7 @@ const ROOT = path.resolve(__dirname, '..');
 const LOCALES_DIR = path.join(ROOT, 'gb2312-big5', '_locales');
 const MANIFEST_PATH = path.join(ROOT, 'gb2312-big5', 'manifest.json');
 
-const TOP_20_LOCALES = [
+const TOP_25_LOCALES = [
   'en',
   'zh_CN',
   'zh_TW',
@@ -25,7 +25,12 @@ const TOP_20_LOCALES = [
   'pl',
   'vi',
   'fa',
-  'th'
+  'th',
+  'bn',
+  'mr',
+  'te',
+  'ta',
+  'fil'
 ];
 
 function readLocale(locale) {
@@ -41,12 +46,12 @@ describe('extension i18n metadata', () => {
     expect(manifest.action.default_title).toBe('__MSG_appName__');
   });
 
-  it('includes top-20 language locale coverage', () => {
+  it('includes top-25 language locale coverage', () => {
     const localeDirs = fs
       .readdirSync(LOCALES_DIR)
       .filter((fileName) => fs.statSync(path.join(LOCALES_DIR, fileName)).isDirectory());
 
-    expect(localeDirs).toEqual(expect.arrayContaining(TOP_20_LOCALES));
+    expect(localeDirs).toEqual(expect.arrayContaining(TOP_25_LOCALES));
   });
 
   it('defines required messages for every locale within Chrome manifest limits', () => {

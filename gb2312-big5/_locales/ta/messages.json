@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "எளிமையாக்கப்பட்ட/பாரம்பரிய சீன மாற்றி",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "எளிமையான சீனம், பாரம்பரிய சீனம், பின்யின் மற்றும் கான்டனீஸ் இடையே இணையப் பக்கங்களை மாற்றவும்.",
+    "description": "Extension description"
+  }
+}

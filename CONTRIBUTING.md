@@ -4,6 +4,11 @@ Thanks for your interest in improving the **Simplified / Traditional Chinese Con
 Chrome extension! Contributions of all kinds are welcome — bug reports, feature
 requests, documentation fixes and pull requests.
 
+This project follows the
+[Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you
+are expected to uphold this code. Notable changes are tracked in the
+[Changelog](CHANGELOG.md).
+
 ## Project layout
 
 ```
@@ -42,10 +47,13 @@ npm install
 | `npm run lint:fix`     | Lint and auto-fix where possible.                                 |
 | `npm run format`       | Format the codebase with Prettier.                                |
 | `npm run format:check` | Verify formatting without writing changes.                        |
+| `npm run fix`          | Auto-fix lint issues and reformat in one step.                    |
 | `npm test`             | Run the Jest unit tests.                                          |
+| `npm run test:watch`   | Run the Jest unit tests in watch mode.                            |
 | `npm run coverage`     | Run the tests and enforce the coverage threshold.                 |
-| `npm run check`        | Run lint + format check + coverage (what CI runs).                |
+| `npm run check`        | Run lint + format check + coverage + build (what CI runs).        |
 | `npm run build`        | Package the extension into `dist/*.zip` for the Chrome Web Store. |
+| `npm run clean`        | Remove the `dist/` and `coverage/` build artifacts.               |
 
 Please make sure `npm run check` passes before opening a pull request.
 

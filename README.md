@@ -6,21 +6,35 @@
 
 <!-- Badges -->
 
+<!-- Build & quality -->
+
 [![CI](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/actions/workflows/ci.yml/badge.svg)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/actions/workflows/ci.yml)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Manifest V3](https://img.shields.io/badge/manifest-v3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
-[![License: MIT](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/doctorlai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/doctorlai/Simplified-and-Traditional-Chinese/commits)
+[![Node.js](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/DoctorLai/Simplified-and-Traditional-Chinese/master/package.json&query=$.engines.node&label=node&logo=node.js&logoColor=white&color=339933)](https://nodejs.org/)
+[![Manifest](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/DoctorLai/Simplified-and-Traditional-Chinese/master/gb2312-big5/manifest.json&query=$.manifest_version&label=manifest&prefix=v&logo=googlechrome&logoColor=white&color=4285F4)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?logo=prettier&logoColor=white)](https://prettier.io/)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Issues](https://img.shields.io/github/issues/doctorlai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/doctorlai/Simplified-and-Traditional-Chinese/issues)
+[![License: MIT](https://img.shields.io/github/license/DoctorLai/Simplified-and-Traditional-Chinese)](LICENSE)
 [![Privacy Policy](https://img.shields.io/badge/privacy-policy-0f766e)](PRIVACY.md)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/DoctorLai/Simplified-and-Traditional-Chinese)
+
+<!-- Repository stats -->
+
+[![GitHub stars](https://img.shields.io/github/stars/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/watchers)
+[![GitHub open issues](https://img.shields.io/github/issues/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/issues)
+[![GitHub open PRs](https://img.shields.io/github/issues-pr/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/commits)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/commits)
+[![Repo size](https://img.shields.io/github/repo-size/DoctorLai/Simplified-and-Traditional-Chinese?logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese)
+[![Top language](https://img.shields.io/github/languages/top/DoctorLai/Simplified-and-Traditional-Chinese?logo=javascript&logoColor=black)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese)
+[![JavaScript](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/DoctorLai/Simplified-and-Traditional-Chinese/master/.github/badges/javascript.json)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/search?l=javascript)
+
+<!-- Chrome Web Store -->
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/olpihmabpjpllgmahlgiakkgaccigpfo?label=chrome%20web%20store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
 [![Users](https://img.shields.io/chrome-web-store/users/olpihmabpjpllgmahlgiakkgaccigpfo?label=users)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
 [![Rating](https://img.shields.io/chrome-web-store/rating/olpihmabpjpllgmahlgiakkgaccigpfo?label=rating)](https://chromewebstore.google.com/detail/olpihmabpjpllgmahlgiakkgaccigpfo)
-[![GitHub stars](https://img.shields.io/github/stars/DoctorLai/Simplified-and-Traditional-Chinese?style=flat&logo=github)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/stargazers)
-[![Last commit](https://img.shields.io/github/last-commit/DoctorLai/Simplified-and-Traditional-Chinese)](https://github.com/DoctorLai/Simplified-and-Traditional-Chinese/commits)
 
 <img width="1164" height="882" alt="image" src="https://github.com/user-attachments/assets/b4f75021-1b72-44e6-a8a3-4a438e4b9f8c" />
 <img width="1133" height="394" alt="image" src="https://github.com/user-attachments/assets/1c65b389-88a8-4694-b44b-97ba9203dc33" />
@@ -40,10 +54,11 @@
   requests only the `storage` permission.
 - ⚡ **Manifest V3** — built on the modern, service‑worker based extension
   platform.
-- 🌍 **Localized metadata** — Chrome Web Store metadata now covers 20 major
-  language/region targets, including English, Chinese, Spanish, Arabic,
-  Portuguese, Indonesian, French, Japanese, Russian, German, Korean, Hindi,
-  Turkish, Italian, Dutch, Polish, Vietnamese, Persian and Thai.
+- 🌍 **Localized metadata** — Chrome Web Store metadata now covers 25 major
+  language targets, including English, Chinese, Spanish, Arabic, Portuguese,
+  Indonesian, French, Japanese, Russian, German, Korean, Hindi, Turkish,
+  Italian, Dutch, Polish, Vietnamese, Persian, Thai, Bengali, Marathi, Telugu,
+  Tamil and Filipino.
 
 ## Install
 
@@ -97,10 +112,13 @@ npm install
 | `npm run lint:fix`     | Lint and auto‑fix where possible.                                 |
 | `npm run format`       | Format the codebase with Prettier.                                |
 | `npm run format:check` | Verify formatting without writing changes.                        |
+| `npm run fix`          | Auto‑fix lint issues and reformat in one step.                    |
 | `npm test`             | Run the Jest unit tests.                                          |
+| `npm run test:watch`   | Run the Jest unit tests in watch mode.                            |
 | `npm run coverage`     | Run the tests and enforce the coverage threshold.                 |
-| `npm run check`        | Run lint + format check + coverage (the CI gate).                 |
+| `npm run check`        | Run lint + format check + coverage + build (the CI gate).         |
 | `npm run build`        | Package the extension into `dist/*.zip` for the Chrome Web Store. |
+| `npm run clean`        | Remove the `dist/` and `coverage/` build artifacts.               |
 
 ### Build a publishable package
 
@@ -111,6 +129,19 @@ npm run build
 
 The generated `.zip` has `manifest.json` at its root and can be uploaded
 directly to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
+
+## Testing
+
+Unit tests run on [Jest](https://jestjs.io/) and cover the pure conversion
+helpers, DOM traversal, the localized metadata, and the content-script bootstrap:
+
+```bash
+npm test          # run the suite
+npm run coverage  # run with coverage and enforce the thresholds
+```
+
+Coverage is collected from `gb2312-big5/js/convert.js` and gated in CI. Please
+add or update tests when you change conversion behaviour.
 
 ## Project structure
 
@@ -124,30 +155,37 @@ gb2312-big5/            # The unpacked extension (this is what gets zipped & pub
     main.js             # Popup logic
     dialect.js          # Cantonese <-> Mandarin tables
     pinyin.js           # Pinyin lookup table (generated data)
-  _locales/             # i18n messages
+  _locales/             # i18n messages (25 locales)
 scripts/build.js        # Packages the extension into dist/*.zip
-tests/                  # Jest unit tests
+tests/                  # Jest unit tests (convert, DOM, i18n, content-script)
 ```
 
 ## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and make
-sure `npm run check` passes before opening a pull request.
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md), follow
+our [Code of Conduct](CODE_OF_CONDUCT.md), and make sure `npm run check` passes
+before opening a pull request. Notable changes are recorded in the
+[Changelog](CHANGELOG.md).
 
 ## Privacy
 
 This extension runs locally in your browser and does not collect, transmit, sell,
 or share personal data. See the [Privacy Policy](PRIVACY.md) for details.
 
+## Security
+
+Found a vulnerability? Please report it privately — see our
+[Security Policy](SECURITY.md) for how to disclose issues responsibly.
+
 ## Support
 
 Enjoy what I am doing? Support me via:
 
-- [Buy me a coffee please ☕](https://helloacm.com/out/buymecoffee)
+- [Buy me a coffee please ☕](https://buymeacoffee.com/y0btg5r)
 - [Become a Github Sponsor 💰](https://github.com/sponsors/DoctorLai)
 - [Become a Patreon 💰](https://www.patreon.com/doctorlai)
-- **[Crypto Payment Accepted ₿](https://justyy.com/out/cryptopayment)**
-- [Paypal 🅿️](https://justyy.com/out/paypal)
+- **[Crypto Payment Accepted ₿](https://buymeacoffee.com/y0btg5r/crypto-payment-accepted)**
+- [Paypal 🅿️](https://paypal.me/doctorlai/5)
 
 More free online tools: <https://helloacm.com/tools/>
 

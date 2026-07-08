@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "সরলীকৃত/ঐতিহ্যবাহী চীনা রূপান্তরকারী",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "সরলীকৃত চীনা, ঐতিহ্যবাহী চীনা, পিনয়িন ও ক্যান্টনিজের মধ্যে ওয়েব পৃষ্ঠা রূপান্তর করুন।",
+    "description": "Extension description"
+  }
+}
